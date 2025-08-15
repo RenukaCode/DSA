@@ -1,3 +1,8 @@
+# link:  https://leetcode.com/problems/two-sum/
+
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 def two_sum(nums, target):
     res = {}
     for i in range(len(nums)):
@@ -7,6 +12,9 @@ def two_sum(nums, target):
         res[nums[i]] = i
     return []
 
-# print(two_sum([11, 15, 2, 7], 9))
+# Example:
+print(two_sum([11, 15, 2, 7], 9))  
+# o/p : [2, 3]
 print(two_sum([11, 15], 9))
+# o/p : []
 
