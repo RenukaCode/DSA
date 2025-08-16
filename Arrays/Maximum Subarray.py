@@ -10,8 +10,7 @@ def maxSub(nums):
     return maxCurr
 
 # example:
-print(maxSub([-2,1,-3,4,-1,2,1,-5,4]))
-
+print(maxSub([-2,1,-3,4,-1,2,1,-5,4])) # o/p: 6
 # time complexity: O(n)
 # space complexity: O(1)
 
