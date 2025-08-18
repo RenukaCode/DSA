@@ -26,6 +26,23 @@ pattern2(5)
     # * * * * *
 
 
+
+def patterna(n):
+    for i in range(n):
+        for k in range(n - i):
+            print(" ", end = " ")
+        for j in range(i):
+            print("*", end = " ")
+        print(end = '\n')
+patterna(5)
+# o/p:
+    #         * 
+    #       * * 
+    #     * * * 
+    #   * * * * 
+    # * * * * *
+
+
 def pattern3(n):
     for i in range(1, n + 1):
         for j in range(1, i + 1):
@@ -262,11 +279,25 @@ pattern16(5)
 # D D D D
 # E E E E E
 
-# def pattern*(n):
-#     for i in range(n):
-#         for k in range(n - i):
-#             print(" ", end = " ")
-#         for j in range(i):
-#             print("*", end = " ")
-#         print(end = '\n')
-# pattern*(5)
+
+def pattern17(n):
+    for i in range(1, n + 1):
+        
+        for j in range(n - i):
+            print(" ", end = " ")
+        for j in range(i):
+            print(chr(65 + j), end = " ")
+        for j in range( i - 2, -1, -1):
+            print(chr(65 + j), end = " ")
+        print()
+pattern17(6)
+# o/p:
+#           A
+#         A B A
+#       A B C B A
+#     A B C D C B A
+#   A B C D E D C B A
+# A B C D E F E D C B A
+
+
+
