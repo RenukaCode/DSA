@@ -195,12 +195,12 @@ def pattern11(n):
             start = 1 - start     
          print()
 pattern11(5)
-# o/p:
-# 1
-# 0 1
-# 0 1 0
-# 1 0 1 0
-# 1 0 1 0 1
+  # o/p:
+    # 1
+    # 0 1
+    # 0 1 0
+    # 1 0 1 0
+    # 1 0 1 0 1
 
 
 def pattern12(n):
@@ -214,12 +214,12 @@ def pattern12(n):
         print()
        
 pattern12(5)
-# o/p:
-# 1                 1
-# 1 2             2 1
-# 1 2 3         3 2 1
-# 1 2 3 4     4 3 2 1
-# 1 2 3 4 5 5 4 3 2 1
+  # o/p:
+    # 1                 1
+    # 1 2             2 1
+    # 1 2 3         3 2 1
+    # 1 2 3 4     4 3 2 1
+    # 1 2 3 4 5 5 4 3 2 1
 
 
 def pattern13(n):
@@ -230,12 +230,12 @@ def pattern13(n):
             nums += 1
         print()
 pattern13(5)
-# o/p:
-# 1
-# 2 3
-# 4 5 6
-# 7 8 9 10
-# 11 12 13 14 15
+  # o/p:
+    # 1
+    # 2 3
+    # 4 5 6
+    # 7 8 9 10
+    # 11 12 13 14 15
             
 
 def pattern14(n):
@@ -244,12 +244,12 @@ def pattern14(n):
             print(chr(65 + j - 1), end = " ")
         print()
 pattern14(5)
-# o/p:
-# A
-# A B
-# A B C
-# A B C D
-# A B C D E
+  # o/p:
+    # A
+    # A B
+    # A B C
+    # A B C D
+    # A B C D E
 
 
 def pattern15(n):
@@ -258,12 +258,12 @@ def pattern15(n):
             print(chr(65 + j - 1), end = " ")
         print()
 pattern15(5)
-# o/p:
-# A B C D E
-# A B C D
-# A B C
-# A B
-# A
+  # o/p:
+    # A B C D E
+    # A B C D
+    # A B C
+    # A B
+    # A
 
 
 def pattern16(n):
@@ -272,12 +272,12 @@ def pattern16(n):
             print(chr(65 + i - 1), end = " ")
         print()
 pattern16(5)
-# o/p:
-# A
-# B B
-# C C C
-# D D D D
-# E E E E E
+  # o/p:
+    # A
+    # B B
+    # C C C
+    # D D D D
+    # E E E E E
 
 
 def pattern17(n):
@@ -291,13 +291,76 @@ def pattern17(n):
             print(chr(65 + j), end = " ")
         print()
 pattern17(6)
-# o/p:
-#           A
-#         A B A
-#       A B C B A
-#     A B C D C B A
-#   A B C D E D C B A
-# A B C D E F E D C B A
+  # o/p:
+    #           A
+    #         A B A
+    #       A B C B A
+    #     A B C D C B A
+    #   A B C D E D C B A
+    # A B C D E F E D C B A
 
 
+def pattern18(n):
+    for i in range(1, n + 1):
+        if i == 1:
+            print("*" * (2* n))
+            continue
+        for j in range(n - i + 1):
+            print("*", end = "")
+        for j in range(2 * i - 2):
+            print(" ", end = "")
+        for j in range(n - i + 1):
+            print("*", end = "")
+        print()
+    for i in range(n, 0, -1):
+         if i == 1:
+             print("*" * (2 * n))
+             continue
+         for j in range(n - i + 1):
+            print("*", end = "")
+         for j in range(2 * i - 2):
+            print(" ", end = "")
+         for j in range(n - i + 1):
+            print("*", end = "")
+         print() 
+pattern18(5)
+  # o/p:
+    # **********
+    # ****  ****
+    # ***    ***
+    # **      **
+    # *        *
+    # *        *
+    # **      **
+    # ***    ***
+    # ****  ****
+    # **********
 
+
+def pattern19(n):
+    for i in range(1, n + 1):
+        print("*" * i + " " * (2 * (n - i)) + "*" * i)
+    for i in range(n - 1, 0, -1):
+        print("*" * i + " "* (2 * (n - i)) + "*" * i)        
+pattern19(5)
+  # o/p:
+    # *        *
+    # **      **
+    # ***    ***
+    # ****  ****
+    # **********
+    # ****  ****
+    # ***    ***
+    # **      **
+    # *        *
+
+
+def pattern20(n):
+    for i in range(1, n + 1):
+            if i == 1 or i == n:
+                print("*" * n)
+            else:
+                print("*" + " " * (n - 2) + "*")
+pattern20(5)
+
+            
