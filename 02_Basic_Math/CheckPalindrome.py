@@ -10,13 +10,13 @@ def isPalindrome(x):
            return True
         else: 
             return False
-print(isPalindrome(121))
-print(isPalindrome(-121))
+print(isPalindrome(121)) # true
+print(isPalindrome(-121))  # false
 
 
 # time complexity: O(log x)
-# space complexity: O(1)
-# Math based Approach
+# space complexity: O(1) 
+# # Math based Approach
 def isPalindrome(x) -> bool:
         rev = 0
         dup = x
@@ -28,7 +28,7 @@ def isPalindrome(x) -> bool:
             return True
         else:
             return False
-print(isPalindrome(565656))
-print(isPalindrome(3003))
-print(isPalindrome(-121))
+print(isPalindrome(565656)) # false
+print(isPalindrome(3003)) # true
+print(isPalindrome(-121)) # false
 
