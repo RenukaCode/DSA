@@ -1,3 +1,10 @@
+# Brute Force Approch
+def countin(n):
+    cnt = int(len(str(n)))
+    return cnt
+print(countin(12234345)) #8
+
+# Optimal solution
 import math
 def countNum(n):
     n = abs(n)
