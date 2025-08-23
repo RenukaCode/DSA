@@ -1,3 +1,5 @@
+# Time Complexity: O(N)
+# Space Complexity: O(N)
 def countEle(arr):
     freq = {}
     for num in arr:
