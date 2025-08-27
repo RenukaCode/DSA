@@ -11,7 +11,7 @@ def selectionSort(arr):
                 min_index = j
         arr[i], arr[min_index] = arr[min_index], arr[i]
     return arr
-print(selectionSort([5,4,3,2,1]))
-print(selectionSort([13,46,24,52,20,9]))
+print(selectionSort([5,4,3,2,1])) #[1, 2, 3, 4, 5]
+print(selectionSort([13,46,24,52,20,9])) #[9, 13, 20, 24, 46, 52]
 
 
