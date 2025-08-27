@@ -9,7 +9,7 @@ def bubbleSort(nums):
             if nums[j] > nums[j + 1]:
                 nums[j], nums[j + 1] = nums[j + 1], nums[j]
     return nums
-print(bubbleSort([13, 24, 46, 20, 9, 52]))
-print(bubbleSort([5, 4, 3, 2, 1]))
-
+print(bubbleSort([13, 24, 46, 20, 9, 52])) #[9, 13, 20, 24, 46, 52]
+print(bubbleSort([5, 4, 3, 2, 1])) #[1, 2, 3, 4, 5]
+ 
 
