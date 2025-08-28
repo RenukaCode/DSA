@@ -3,7 +3,6 @@
 
 def bubbleSort(nums):
     n = len(nums)
-    temp = None
     for i in range(0, n - 1):
         for j in range(n - i - 1):
             if nums[j] > nums[j + 1]:

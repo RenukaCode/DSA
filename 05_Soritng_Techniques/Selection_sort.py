@@ -3,7 +3,6 @@
 
 def selectionSort(arr):
     n = len(arr)
-    temp = None
     for i in range(0, n - 1):
         min_index = i
         for j in range(i + 1, n):
