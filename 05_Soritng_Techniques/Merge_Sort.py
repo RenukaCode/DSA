@@ -1,3 +1,6 @@
+# Time Complexity : O(n log n)
+# Space Complexity : O(n)
+
 def mergeSort(arr):
     if len(arr) <= 1:
         return arr
