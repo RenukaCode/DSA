@@ -76,7 +76,8 @@ def subarray(arr, k):
         if sum == k:
             maxlen = max(maxlen, right - left + 1)
         right += 1
-        if right < n : sum += arr[right]
+        if right < n:
+            sum += arr[right]
     return maxlen
 print(subarray([10, 5, 2, 7, 1, 9], 15))
 # output : 4

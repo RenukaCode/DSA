@@ -10,6 +10,7 @@ def numberOnce(arr):
         if count == 1:
             return arr[i]
 print(numberOnce([1, 2, 3, 2, 1]))
+# output: 3
 
 
 
@@ -27,7 +28,9 @@ def numberOnce(arr):
         if value == 1:
             return key
 print(numberOnce([1, 2, 3, 2, 1]))
+# output: 3
 print(numberOnce([4, 5, 6, 5, 4, 6, 7]))
+# output: 7
 
 
 
@@ -40,5 +43,6 @@ def numberOnce(arr):
         xor ^= i
     return xor
 print(numberOnce([1, 2, 3, 2, 1]))
+# output: 3
 
 
