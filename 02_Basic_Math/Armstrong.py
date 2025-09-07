@@ -1,4 +1,4 @@
-# link: https://leetcode.com/problems/armstrong-number/description/
+# link: https://leetcode.com/problems/armstrong-number/
 # time complexity: O(log10N + 1)
 # space complexity: O(1)
 
