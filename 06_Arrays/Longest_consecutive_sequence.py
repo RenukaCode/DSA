@@ -1,3 +1,6 @@
+# Brute Force Approach
+# Time Complexity: O(N^2)
+# Sapce Complexity: O(1)
 def longestConsecutive(nums):
     n = len(nums)
     maxLen = 0
@@ -23,6 +26,9 @@ print(longestConsecutive([3, 8, 5, 7, 6]))
 
 
 
+# Better Approach
+# Time Complexity: O(NlogN) + O(N)
+# Space Complexity: O(N)
 def longestConsecutive(nums):
     n = len(nums)
     if n == 0:
@@ -46,6 +52,10 @@ print(longestConsecutive([3, 8, 5, 7, 6]))
 #  output: 4
 
 
+
+# Optimal Approach
+# Time Complexity: O(N)
+# Space Complexity: O(N)
 def longestConsecutive(nums):
     if not nums:
         return 0
