@@ -27,6 +27,10 @@ print(zeroMatrix(matrix))
           # [1, 0, 1]]
 
 
+
+# Optimal Solution
+# Time COmplexity: O(2*(N*M))
+# Space Complexity: O(1)
 def zero_matrix(matrix):
     if not matrix or not matrix[0]:
         return matrix
