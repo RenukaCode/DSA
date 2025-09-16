@@ -16,7 +16,7 @@ print(next_permutation([3, 2, 1]))
 
 
 
-# Better Approach
+# Optimal Approach
 # Time Complexity: O(N)
 # Space Complexity: O(1)
 def next_permutation(nums):
@@ -35,3 +35,4 @@ print(next_permutation([1, 2, 3]))
 print(next_permutation([3, 2, 1]))
 # output: [1, 2, 3]
 print(next_permutation([2, 1, 5, 4, 3, 0, 0]))
+# output: [2, 3, 0, 0, 1, 4, 5]
