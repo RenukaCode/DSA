@@ -28,6 +28,9 @@ print(pascalsTriangle(5))
 #  [1, 4, 6, 4, 1]
     
 
+# Variation-3(Pascal's Triangle)
+# Time Complexity: O(N)
+# Space Complexity:O(N)
 def pascalsTriangle(n):
     triangle = []
     for row in range(0, n):
