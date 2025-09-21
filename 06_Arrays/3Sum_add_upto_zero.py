@@ -15,6 +15,8 @@ def triplet(arr, n):
     return ans
 print(triplet([-1,0,1,2,-1,-4], 6))
 # [[-1, 0, 1], [-1, -1, 2]]
+print(triplet([-1,0,1,0], 4))
+# [[-1, 0, 1]]
 
 
 
@@ -36,12 +38,13 @@ def triplet(arr, n):
     return ans
 print(triplet([-1,0,1,2,-1,-4], 6))
 # [[-1, 0, 1], [-1, -1, 2]]
-
+print(triplet([-1,0,1,0], 4))
+# [[-1, 0, 1]]
 
 
 # Optimal Approach
-
-
+# Time Complexity:  O(NlogN)+O(N2)
+# Space Complexity: O(no. of quadruplets)
 def triplet(arr, n):
     ans = []
     arr.sort()
@@ -68,3 +71,6 @@ def triplet(arr, n):
     return ans
 print(triplet([-1,0,1,2,-1,-4], 6))
 # [[-1, 0, 1], [-1, -1, 2]]
+print(triplet([-1,0,1,0], 4))
+# [[-1, 0, 1]]
+print(triplet([2,-3,0,-2,-5,-5,-4,1,2,-2,2,0,2,-4,5,5,-10], 17))
