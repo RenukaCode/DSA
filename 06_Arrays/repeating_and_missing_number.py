@@ -71,6 +71,9 @@ print(findElements([3,1,2,5,3], 5))
 
 
 
+# Optimal Approach 2
+# Time Complexity: O(N)
+# Space Complexity: O(1)
 def findElements(nums, n):
     xor_all = 0
     for num in nums:
