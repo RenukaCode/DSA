@@ -14,6 +14,10 @@ print(reversePairs([2,4,3,5,1], 5))
 # 3
 
 
+
+# Optimal Approach
+# Time Complexity: O(2N*logN)
+# Space Complexity: O(N)
 def merge(nums, low, mid, high):
     temp = []
     left = low
