@@ -61,6 +61,9 @@ print(subarray([1,2,3], 3))
             
 
 
+# Optimal Solution 2
+# Time Complexity: O(N)
+# Space Complexity: O(N)
 def subarray(nums, k):
     prefix_sum = 0
     n = len(nums)
