@@ -1,3 +1,6 @@
+# Linear Search Approach
+# Time Complexity: O(N)
+# Space Complexity: O(1)
 def rotatedArray_count(nums, n):
     res = -1
     ans = float('inf')
@@ -13,6 +16,11 @@ print(rotatedArray_count([7, 9, 11, 12, 5], 5))
 print(rotatedArray_count([7, 9, 11, 12, 15], 5))
 #  0
 
+
+
+# Binary Search Approach
+# Time Complexity: O(LogN)
+# Space Complexity: O(1)
 def rotatedArray_count(nums, n):
     low = 0
     high = n - 1
