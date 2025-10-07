@@ -48,9 +48,9 @@ def singelEle(nums, n):
     high = n - 1
     if n == 1:
         return nums[0]
-    if nums[0] != nums[1]:
+    elif nums[0] != nums[1]:
         return nums[0]
-    if nums[n - 1] != nums[n - 2]:
+    elif nums[n - 1] != nums[n - 2]:
         return nums[n - 1]
     while low <= high:
         mid = (low + high) // 2
@@ -67,3 +67,4 @@ print(singelEle([1], 1))
 # 1
 print(singelEle([1,1,2], 3))
 # 2
+print(singelEle([[1,1,2,3,3,4,4,8,8]], 9))
