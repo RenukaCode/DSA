@@ -67,4 +67,3 @@ print(singelEle([1], 1))
 # 1
 print(singelEle([1,1,2], 3))
 # 2
-print(singelEle([[1,1,2,3,3,4,4,8,8]], 9))
