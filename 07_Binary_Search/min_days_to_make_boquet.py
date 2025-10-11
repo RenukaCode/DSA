@@ -1,31 +1,64 @@
 # Brute Force Approach
 # Time Complexity: O((max(arr[])-min(arr[])+1)
 # Space Complexity: O(1)
-def pos(arr, day, m, k):
+def days(arr, m, k):
     n = len(arr)
-    noOfB = 0
-    count= 0
-    for i in range(n):
-        if arr[i] <= day:
-            count += 1
-        else:
-            noOfB += count // k
-            count = 0
-    noOfB += count // k
-    return noOfB >= m
-def fn(arr, k, m):
-    n = len(arr)
-    val = m * k
-    if val > n:
+    if m * k > n:
         return -1
-    mini = float('inf')
-    maxi = float('-inf')
-    for i in range(n):
-        mini = min(mini, arr[i])
-        maxi = max(maxi, arr[i])
-    for i in range(mini, maxi + 1):
-        if pos(arr, i, m, k):
-            return i
+    mini = min(arr)
+    maxi = max(arr)
+    for day in range(mini, maxi + 1):
+        boquets = 0
+        count = 0
+        for i in range(n):
+            if arr[i] <= day:
+                count += 1
+                if count == k:
+                    boquets += 1
+                    count = 0
+            else:
+                count = 0
+        if boquets == m:
+            return day
     return -1
-print(fn([7, 7, 7, 7, 13, 11, 12, 7], 3, 2))
+print(days([7, 7, 7, 7, 13, 11, 12, 7], 2, 3))
 # 12
+print(days([1, 10, 3, 10, 2], 3, 2))
+# -1
+
+
+
+# Optimal Solution
+# Time Complexity: O(LogN)
+# Space Complexity: O(1)
+def days(arr, m, k):
+    n = len(arr)
+    if m * k > n:
+        return -1
+    high = max(arr)
+    low = min(arr)
+    res = -1
+    while low <= high:
+        mid = (low + high) // 2
+        count = 0
+        boquets = 0
+        for i in range(n):
+            if arr[i] <= mid:
+                count += 1
+                if count == k:
+                    boquets += 1
+                    count = 0
+            else:
+                count = 0
+        if boquets == m:
+            res = mid
+            high = mid - 1
+        else:
+            low = mid + 1
+    return res
+print(days([7, 7, 7, 7, 13, 11, 12, 7], 2, 3))
+# 12
+print(days([1, 10, 3, 10, 2], 3, 2))
+# -1
+
+        
