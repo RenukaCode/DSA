@@ -14,6 +14,11 @@ print(fn([4,7,9,10], 1))
 print(fn([4,7,9,10],4))
 # 5
 
+
+
+# Optimal Solution
+# Time Complexity: O(LogN)
+# Space Complexity: O(1)
 def fn(vec, k):
     n = len(vec)
     low, high = 0, n - 1
