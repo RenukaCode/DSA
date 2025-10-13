@@ -50,3 +50,22 @@ print(leastCapacity([5, 4, 5, 2, 3, 4, 5, 6],5))
 print(leastCapacity([1,2,3,4,5,6,7,8,9,10],1))
 # 55
 
+
+def shipWithindays(weights, days):
+    low = max(weights)
+    high = sum(weights)
+    while low <= high:
+        mid, day, load = (low + high) // 2, 1, 0
+        for w in weights:
+            if load + w > mid:
+                day += 1
+                load = 0
+            else:
+                load += w
+        if day > days: low = mid + 1
+        else: high = mid
+    return low
+print(leastCapacity([5, 4, 5, 2, 3, 4, 5, 6],5))
+# 9
+print(leastCapacity([1,2,3,4,5,6,7,8,9,10],1))
+# 55
