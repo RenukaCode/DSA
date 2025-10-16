@@ -24,8 +24,8 @@ print(aggressiveCows([0, 3, 4, 7, 10, 9],4))
 # 3
 print(aggressiveCows([4,2,1,3,6],2))
 # 5
- 
-    
+
+
 
 # Optimal Solution
 # Time Complexity:  O(NlogN) + O(N * log(max(stalls[])-min(stalls[])))
