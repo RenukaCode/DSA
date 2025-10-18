@@ -15,7 +15,7 @@ def fn(nums, k):
     low = max(nums)
     high = sum(nums)
     for i in range(low, high + 1):
-        if countPartitions(nums,i) == k:
+        if countPartitions(nums,i) <= k:
             return i
     return low
 print(fn([10, 20, 30, 40], 2))
@@ -46,7 +46,7 @@ def fn(nums, k):
     res = low
     while low <= high:
         mid = (low + high) // 2
-        if countPartitions(nums, mid) == k:
+        if countPartitions(nums, mid) <= k:
             res = mid
             high = mid - 1
         else:
@@ -58,3 +58,4 @@ print(fn([3,5,1], 3))
 # 5
 print(fn([10, 20, 30, 40],2))
 # 60
+print(fn([10,5,13,4,8,4,5,11,14,9,16,10,20,8],8))
