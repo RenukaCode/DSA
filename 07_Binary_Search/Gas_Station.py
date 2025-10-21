@@ -21,3 +21,31 @@ def minimiseMaxDistance(arr, k):
         maxAns = max(maxAns, sectionLength)
     return maxAns
 print(minimiseMaxDistance([1, 2, 3, 4, 5],4))
+# 0.5
+print(minimiseMaxDistance([1,2,3,4,5,6,7,8,9,10],1, 1e-6))
+# 1
+
+
+# Optimal Solution
+# Time Complexity:  O(n*log(Len)) + O(n)
+# Space Comlexity: O(1)
+import math
+def minimiseMaxDistance(stations, k, eps):
+    maxGap = max(stations[i + 1] - stations[i] for i in range(len(stations) - 1))
+        
+    low , high = 0.0, maxGap
+    while high - low > eps:
+        mid = (low + high) / 2.0
+        required = 0
+        for i in range(len(stations) - 1):
+            gap = stations[i + 1] - stations[i]
+            required += math.ceil(gap / mid) - 1
+        if required > k:
+            low = mid
+        else:
+            high = mid
+    return high
+print(minimiseMaxDistance([1, 2, 3, 4, 5],4, 1e-6))
+# 0.5
+print(minimiseMaxDistance([1,2,3,4,5,6,7,8,9,10],1, 1e-6))
+# 1
