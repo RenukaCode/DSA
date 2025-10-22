@@ -1,3 +1,6 @@
+# Brute Force Approach
+# Time Complexity: O(N1+N2)
+# Space Complexity: O(N1+N2)
 def median(nums1, nums2):
     arr = []
     i = j = 0
@@ -17,13 +20,17 @@ def median(nums1, nums2):
     else:
         return (arr[n // 2 - 1] + arr[n // 2]) / 2.0
 print(median([1, 3],[2]))
-# 1
+# 2
 print(median([2,4,6],[1,3,5]))
 # 3.5
 print(median([2,4,6],[1,3]))
 # 3
 
 
+
+# Better Approach
+# Time Complexity: O(N1+N2)
+# Space Complexity: O(1)
 def median(nums1, nums2):
     n1 = len(nums1)
     n2 = len(nums2)
@@ -56,8 +63,8 @@ def median(nums1, nums2):
         return float(indEle2)
     return (indEle1 + indEle2) / 2.0
 print(median([1, 3],[2]))
-# 1
+# 2.0
 print(median([2,4,6],[1,3,5]))
 # 3.5
 print(median([2,4,6],[1,3]))
-# 3
+# 3.0
