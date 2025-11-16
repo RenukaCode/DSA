@@ -7,6 +7,8 @@ def largest(s):
         if (int(s[i]) % 2) == 1:
             idx = i
             break
+    if idx == -1:
+        return ""
     i = 0
     while i <= idx and s[i] == '0':
         i += 1
@@ -15,3 +17,5 @@ print(largest("503"))
 # 503
 print(largest("00009"))
 # 9
+print(largest("4206"))
+# ""
