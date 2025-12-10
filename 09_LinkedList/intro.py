@@ -91,3 +91,7 @@ ll.display()
 #20->40->50->None
 
     
+arr = [2,5,8,7]
+y = Node(arr[0])
+print(y)
+print(y.value)
