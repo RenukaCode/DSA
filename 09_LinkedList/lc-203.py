@@ -1,10 +1,10 @@
 # lc - 203. Remove Linked List Elements
-"""
+""""""
 class Node:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-"""      
+""""""    
 class Solution:
     def removeElements(self, head, val):
         temp = Node(0)
