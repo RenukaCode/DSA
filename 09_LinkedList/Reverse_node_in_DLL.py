@@ -1,9 +1,5 @@
-# node = None
-# temp = head.next
-# head.next = node
-# head.prev = temp
-# node = head
-# head = temp
+# Time COmplexity: O(n)
+# Space Complexity: O(1)
 class Node:
     def __init__(self, value):
         self.value = value
