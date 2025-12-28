@@ -72,3 +72,78 @@ ll = LL()
 print(ll.palindrome(head))  # True"""
 
 
+
+# By Converting LL to Arr
+"""
+class Node:
+    def __init__(self,value):
+        self.value = value
+        self.next = None"""
+class LL:
+    def fn(self, head):
+        arr = []
+        while head:
+            arr.append(head.value)
+            head = head.next
+        left = 0
+        right = len(arr) - 1
+        while left < right:
+            if arr[left] != arr[right]:
+                return False
+            left += 1
+            right -= 1
+        return True
+"""
+head = Node(1)
+head.next = Node(5)
+head.next.next = Node(2)
+head.next.next.next = Node(5)
+head.next.next.next.next = Node(1)
+
+ll = LL()
+print(ll.fn(head))"""             #True
+
+
+
+# By Reversing and comparing
+"""
+class Node:
+    def __init__(self,value):
+        self.value = value
+        self.next = None"""
+class LL:
+    def fn(self,head):
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        while slow:
+            node = None
+            temp = slow.next
+            slow.next = node
+            node = slow
+            slow = temp
+        first, second = head, node
+        while second:
+            if first.value != second.value:
+                return False
+            first = first.next
+            second = second.next
+        return True
+"""
+head = Node(1)
+head.next = Node(5)
+head.next.next = Node(2)
+head.next.next.next = Node(5)
+head.next.next.next.next = Node(1)
+
+ll = LL()
+print(ll.fn(head))"""                 #True
+        
+
+
+
+
+
+
+
