@@ -26,13 +26,15 @@ class LL:
                     oddTail.next = temp
                     oddTail = temp
             temp = temp.next
-        if not evenHead:
-            return oddHead
-        evenTail.next = oddHead
-        if not oddTail:
+        if not oddHead:
+            evenTail.next = None
             return evenHead
-        oddTail.next = None
-        return evenHead
+        if not evenHead:
+            oddTail.next = None
+            return oddHead
+        oddTail.next = evenHead
+        evenTail.next = None
+        return oddHead
     """
     def display(self, head):
         temp = head
