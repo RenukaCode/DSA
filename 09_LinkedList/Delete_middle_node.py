@@ -45,7 +45,6 @@ ll.display(new_head)                     #1->2->4->5->None"""
 # Optimal Approach 
 # Time Complexity: O(N/2)
 # Space Complexity: O(1)
-
 """
 class Node:
     def __init__(self, value):
