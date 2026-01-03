@@ -58,7 +58,6 @@ class LL:
         left = self.sortLL(head)
         right = self.sortLL(slow)
         return self.mergeLL(left, right)
-        return slow
     def mergeLL(self, l1, l2):
         dummy = Node(0)
         temp = dummy
