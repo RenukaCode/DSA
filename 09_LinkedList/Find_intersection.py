@@ -37,3 +37,41 @@ if intersection_node:
 
 
 
+# Better Approach using Hashing
+# Time Complexity: O(m+n)
+# Space Complexity: O(n)
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+class LL:
+    def findIntersection(self, head1, head2):
+        seen = set()
+        while head1:
+            seen.add(head1)
+            head1 = head1.next
+        while head2:
+            if head2 in seen:
+                return head2
+            head2 = head2.next
+        return None
+    def display(self, head):
+        while head:
+            print(head.value, end = "->")
+            head = head.next
+        print("None")
+"""
+head = Node(3)
+head.next = Node(1) 
+head.next.next = Node(2)
+head.next.next.next = Node(4)
+head2 = head.next.next  # Node with value 2
+ll = LL()
+ll.display(head)                         #3->1->2->4->None
+ll.display(head2)                        #2->4->None
+intersection_node = ll.findIntersection(head, head2)
+if intersection_node:
+    print("Intersection at node with value:", intersection_node.value)""" 
+    #Intersection at node with value: 2
+
+
