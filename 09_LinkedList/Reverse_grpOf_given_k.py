@@ -30,11 +30,13 @@ class LL:
             curr = curr.next
             k -= 1
         return curr
+    """
     def display(self, head):
         while head:
             print(head.value, end = "->")
             head = head.next
-        print("None")
+        print("None")"""
+"""
 head = Node(1)
 head.next = Node(2)
 head.next.next = Node(3)
@@ -44,3 +46,4 @@ ll = LL()
 ll.display(head)                     #1->2->3->4->5->None
 new_head = ll.reverseK(head, 2)
 ll.display(new_head)                 #2->1->4->3->5->None
+"""
