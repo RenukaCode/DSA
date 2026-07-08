@@ -25,6 +25,7 @@ class ArrayStack:
         return self.stackArr[self.topIdx]
     def isEmpty(self):
         return self.topIdx == -1
+    
 if __name__ == "__main__":
     stack = ArrayStack()
     commands = ["ArrayStack", "push", "push", "top", "pop", "isEmpty"]
