@@ -39,6 +39,9 @@ q = LinkedListQueue()
 q.enqueue(10)
 q.enqueue(20)
 q.enqueue(30)
-q.display()        # Output: 10 -> 20 -> 30 -> None
-print(q.dequeue()) # Output: 10
+q.display()       
+print(q.dequeue())
 print(q.peek())       
+#10->20->30->None
+10
+20
