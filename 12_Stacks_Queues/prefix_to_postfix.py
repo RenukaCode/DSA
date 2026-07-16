@@ -1,6 +1,6 @@
 # Time Complexity: O(n)
 # Space Complexity: O(n)
-def prefix_to_infix(prefix):
+def prefix_to_postfix(prefix):
     st = []
     for c in reversed(prefix):
         if c.isalnum():
@@ -8,7 +8,6 @@ def prefix_to_infix(prefix):
         else:
             op1 = st.pop()
             op2 = st.pop()
-            st.append(f"({op1}{c}{op2})")
+            st.append(op1+op2+c)
     return st[-1]
-print(prefix_to_infix("*-A/BC-/AKL"))   # ((A-(B/C))*((A/K)-L))
-print(prefix_to_infix("*+ab-cd"))       # ((a+b)*(c-d))
+print(prefix_to_postfix("*-A/BC-/AKL"))  # ABC/-AK/L-*
