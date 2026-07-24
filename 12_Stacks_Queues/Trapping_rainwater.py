@@ -19,6 +19,10 @@ print(fn([3,0,2,0,4]))  # 7
 print(fn([0,1,0,2,1,0,1,3,2,1,2,1]))  # 14
 
 
+
+# Optimal Solution
+# Time Complexity: O(n)
+# Space Complexity: O(1)
 def fn(height):
     maxLeft = 0
     maxRight = 0
