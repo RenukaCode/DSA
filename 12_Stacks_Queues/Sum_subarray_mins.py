@@ -24,7 +24,7 @@ def fn(nums):
     res = [0]*n
     st = []
     for i in range(n):
-        while st and st[-1] > nums[i]:
+        while st and nums[st[-1]] > nums[i]:
             st.pop()
         j=st[-1] if st else -1
         res[i]=res[j]+(i-j)*nums[i]
