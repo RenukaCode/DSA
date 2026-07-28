@@ -20,5 +20,5 @@ def fn(nums,k):
     if not res:
         return '0'
     return res
-# print(fn("58192",2)) #192
+print(fn("58192",2)) #192
 print(fn("1000034",2)) #3
