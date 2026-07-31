@@ -21,7 +21,7 @@ def fn(nums,k):
     for i in range(len(nums)):
         if dq and dq[0]<=i-k:
             dq.popleft()
-        if dq and nums[dq[-1]] < nums[i]:
+        while dq and nums[dq[-1]] < nums[i]:
             dq.pop()
         dq.append(i)
         if i>=k-1:
