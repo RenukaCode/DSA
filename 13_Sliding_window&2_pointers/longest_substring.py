@@ -17,6 +17,10 @@ print(fn("abcddabcbb")) #4
 print(fn("cadbzabcd"))  #5
 
 
+
+# Optimal Approach
+# Time Complexity: O(n)
+# Space Complexity: O(n)
 def fn(nums):
     n = len(nums)
     hash_map = {}  
