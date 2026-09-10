@@ -1,3 +1,5 @@
+# Time Complexity: O(n)
+# Space Complexity: O(n)
 def fn(tasks,n):
     maxFreq=0
     maxCnt=0
@@ -9,5 +11,5 @@ def fn(tasks,n):
     return max((maxFreq-1)*(n+1)+maxCnt,len(tasks))
 print(fn(["A","A","A","B","B","B"],2))  # 8
 print(fn(["A","A","A","B","B","B"],0))  # 6
-print(fn(["A","C","A","B","D","B"],1))
+print(fn(["A","C","A","B","D","B"],1))  # 6
 
